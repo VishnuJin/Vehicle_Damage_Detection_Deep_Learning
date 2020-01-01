@@ -14,7 +14,6 @@ def index():
 
 @app.route('/<path:path>')
 def model(path):
-    print(path)
     return send_from_directory('Model',path)
 if __name__ == "__main__":
     app.run(debug=True)

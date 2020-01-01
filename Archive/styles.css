@@ -1,0 +1,460 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+	background: #212121;
+	font-size:22px;
+	line-height: 32px;
+	color: #ffffff;
+	word-wrap:break-word !important;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Bree Serif', 'serif';
+    margin: 0 auto;
+	}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}	
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align:center;
+	font-size:60px;
+	font-family: 'Bree Serif', 'serif';
+	}
+
+#navbar {
+    margin: 0 auto;
+    
+}
+
+p {
+	text-align: center;
+}
+
+nav {
+    /*margin: 50px 0; */
+    margin: auto;
+    background-color: #212121;
+   
+}
+
+nav ul {
+	padding: 0;
+    margin: 0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+    background-color: #212121;
+    
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	font-size:25px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+
+nav a:hover { 
+	background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; /* the height of the main nav */
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:170px;
+}
+
+.alignRight{
+    float: right;
+}
+
+  
+@import url(https://fonts.googleapis.com/css?family=Expletus+Sans:600);
+/*==========SCALE-IN==========*/
+@-webkit-keyframes scale-in {
+     0%   {transform: scale(10, 10); opacity: 0;}
+    100% {transform: scale(1, 1); opacity: 1;}
+}
+
+@keyframes scale-in {
+    0%   {transform: scale(10, 10); opacity: 0;}
+    100% {transform: scale(1, 1);  opacity: 1;}
+}
+/*==========ROLL-OUT==========*/
+@-webkit-keyframes roll-out {
+    0%   {width: 0;}
+    100% {width: 100%; }
+}
+@keyframes roll-out {
+    0%   {width: 0;}
+    100% {width: 100%; }
+}
+
+main{
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Expletus Sans', cursive;
+}
+.hero{
+  width: 100%;
+  max-width: 1600px;
+  height: 500px;
+  text-align: center;
+  margin: 0 auto;
+  background: #222222;
+  position: relative; 
+  color: #392f28;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero h1{
+  font-size: 3.5em;
+  margin: auto;
+  position: absolute; 
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.hero p{
+  font-size: 1.5em;
+  margin: auto;
+  position: absolute; 
+  top: 220px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   z-index: 1;
+}
+.hero img{
+  width: 100%;
+}
+.bar{
+  width: 100%;
+  height: 200px;
+  background: -moz-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  background: -webkit-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  background: -ms-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  background: linear-gradient(161deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  opacity: 0.3;
+  position: absolute; 
+  z-index: 0;
+  left: 0;
+  top: 90px;
+  -ms-transform-origin: 100% 0%;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+   -webkit-animation: roll-out 1.2s ease-out ;
+  -moz-animation: roll-out 1.2s ease-out ;
+    animation: roll-out 1.2s ease-out ; 
+}
+.hero h1, .hero p{
+  -webkit-animation: scale-in 1.3s ease-out;
+  -moz-animation: scale-in 1.3s  ease-out;
+    animation: scale-in 1.3s ease-out; 
+}
+
+
+@media all and (max-width: 768px) {
+  .hero{
+    height: 50vw;
+  }
+  .bar{
+    height: 26vw;
+    top: 10vw;
+  }
+  .hero h1{
+    font-size: 8vw;
+    top: 13vw;
+  }
+  .hero p{
+    font-size: 3vw;
+    top: 27vw;
+  }
+ 
+}
+.hero p button{
+    background: none;
+    border: 2px solid #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    min-width: 40px;
+    font-size: 0.6em;
+}
+.hero p button:hover{
+    background-color: #ffffff;
+    color: #392f28;
+    cursor: pointer;
+    
+}
+.howToflex{
+    color: cadetblue;
+}
+h3{
+    color: wheat;
+}
+@media(min-width:468px){
+    .container-2{
+        display:flex;  
+        /*
+        justify-content:flex-start;
+        justify-content:flex-end;
+        justify-content:center;
+        justify-content:space-around;
+        */
+        justify-content:space-between;
+        
+      }
+    }
+    
+    .container-3{
+      display:flex;  
+      flex-wrap:wrap;
+      justify-content:space-between;
+    }
+    
+    .container-1 div, .container-2 div, .container-3 div{
+      /* border:1px #ccc solid; */
+      padding:10px;
+      
+    }
+    
+    .box-1{
+      flex:2;
+      order:2;
+    }
+    
+    .box-2{
+      flex:1;
+      order:1;
+    }
+    
+    .box-3{
+      flex:1;
+      order: 3;
+    }
+    
+    .container-2-box{
+      flex-basis: 27%;  
+    }
+    
+    .container-3-box{
+      flex-basis:12%;
+    }
+    .material-icons.md-42 { 
+        font-size: 42px; 
+    }
+    i{
+        float: center;
+    }
+    .submission{
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        color: #5f6982;
+        height: 100%;
+        text-align: center;
+        padding: 2rem;
+        background: #f8f8f8;
+    }
+    /* html, body, * {
+        box-sizing: border-box;
+        font-size: 16px;
+      } */
+      
+    
+      
+      h2 {
+        font-family: "Roboto", sans-serif;
+        font-size: 26px;
+        line-height: 1;
+        color: #454cad;
+        margin-bottom: 0;
+      }
+      
+      
+      .uploader {
+        display: block;
+        clear: both;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+      }
+      .uploader label {
+        float: left;
+        clear: both;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        background: #fff;
+        border-radius: 7px;
+        border: 3px solid #eee;
+        transition: all 0.2s ease;
+        user-select: none;
+      }
+      .uploader label:hover {
+        border-color: #454cad;
+      }
+      .uploader label.hover {
+        border: 3px solid #454cad;
+        box-shadow: inset 0 0 0 6px #eee;
+      }
+      .uploader label.hover #start i.fa {
+        transform: scale(0.8);
+        opacity: 0.3;
+      }
+      .uploader #start {
+        float: left;
+        clear: both;
+        width: 100%;
+      }
+      .uploader #start.hidden {
+        display: none;
+      }
+      .uploader #start i.fa {
+        font-size: 50px;
+        margin-bottom: 1rem;
+        transition: all 0.2s ease-in-out;
+      }
+      .uploader #response {
+        float: left;
+        clear: both;
+        width: 100%;
+      }
+      .uploader #response.hidden {
+        display: none;
+      }
+      .uploader #response #messages {
+        margin-bottom: 0.5rem;
+      }
+      .uploader #file-image {
+        display: inline;
+        margin: 0 auto 0.5rem auto;
+        width: auto;
+        height: auto;
+        max-width: 180px;
+      }
+      .uploader #file-image.hidden {
+        display: none;
+      }
+      .uploader #notimage {
+        display: block;
+        float: left;
+        clear: both;
+        width: 100%;
+      }
+      .uploader #notimage.hidden {
+        display: none;
+      }
+      .uploader progress,
+      .uploader .progress {
+        display: inline;
+        clear: both;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 180px;
+        height: 8px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #eee;
+        overflow: hidden;
+      }
+      .uploader .progress[value]::-webkit-progress-bar {
+        border-radius: 4px;
+        background-color: #eee;
+      }
+      .uploader .progress[value]::-webkit-progress-value {
+        background: linear-gradient(to right, #393f90 0%, #454cad 50%);
+        border-radius: 4px;
+      }
+      .uploader .progress[value]::-moz-progress-bar {
+        background: linear-gradient(to right, #393f90 0%, #454cad 50%);
+        border-radius: 4px;
+      }
+      .uploader input[type=file] {
+        display: none;
+      }
+      
+      .uploader div {
+        margin: 0 0 0.5rem 0;
+        color: #5f6982;
+      }
+      
+      .uploader .btn {
+        display: inline-block;
+        margin: 0.5rem 0.5rem 1rem 0.5rem;
+        clear: both;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: initial;
+        border: none;
+        border-radius: 0.2rem;
+        outline: none;
+        padding: 0 1rem;
+        height: 36px;
+        line-height: 36px;
+        color: #fff;
+        transition: all 0.2s ease-in-out;
+        box-sizing: border-box;
+        background: #454cad;
+        border-color: #454cad;
+        cursor: pointer;
+      }
+
+/* 	
+/* Change this in order to change the Dropdown symbol 
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; } */
